@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" fx:id="currentScene" stylesheets="/sample/mainProgram/view/mainStyle.css" maxWidth="-Infinity" prefHeight="675.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.mainProgram.MainController">
+   <top>
+      <HBox alignment="CENTER" minHeight="100.0" minWidth="1200.0" prefHeight="100.0" prefWidth="1200.0" BorderPane.alignment="TOP_LEFT">
+         <children>
+            <ImageView fitHeight="100.0" fitWidth="250.0"><Image url="@beginners-bodybuilding-program-2.jpg"></Image></ImageView>
+            <Label fx:id="mainLabel" prefHeight="100.0" prefWidth="600.0" alignment="CENTER" text="MAKE YOUR BODY STRONGER">
+               <font>
+                  <Font size="38.0" />
+               </font>
+            </Label>
+            <StackPane fx:id="exitPane" prefHeight="100.0" prefWidth="400.0">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Label alignment="CENTER"  fx:id="lableUser" prefHeight="40.0" prefWidth="200.0" text="">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <Button alignment="CENTER" fx:id="buttonLogOut" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="175.0" text="LogOut">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <Button alignment="CENTER" fx:id="buttonEdit" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Edit Profile">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </StackPane>
+         </children>
+      </HBox>
+   </top>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="80.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="buttonLeft" onAction="#previusPage" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="Previous">
+               <HBox.margin>
+                  <Insets right="30.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="buttonRight" onAction="#nextPage" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="Next">
+            </Button>
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+   </center>
+</BorderPane>

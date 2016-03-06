@@ -1,14 +1,16 @@
 package sample.logIn.controller;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
 import sample.dataBase.BDConnection;
 import sample.logIn.model.User;
+import sample.mainProgram.MainWindow;
+import sample.registration.RegistrationWindow;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -16,9 +18,7 @@ import java.sql.SQLException;
 
 public class LogInController {
     @FXML
-    private GridPane MainPane;
-    @FXML
-    private Button Registration;
+    private Label messageToUser;
     @FXML
     private Button Sign;
     @FXML
@@ -26,7 +26,7 @@ public class LogInController {
     @FXML
     private TextField NameField;
     @FXML
-    private User unloginedUser;
+    private User unloginedUser = User.USER_WITHOUT_DATA;
 
     public PasswordField getPassField() {
         return PassField;
@@ -36,23 +36,29 @@ public class LogInController {
     }
     @FXML
     private void logInPressed(ActionEvent actionEvent) {
-        String sql = "SELECT \"password\" FROM public.\"user\" WHERE \"username\"='"+NameField.getText()+"';";
-        ResultSet resultSet= BDConnection.createSelectQuery(sql);
-        try {
-            resultSet.next();
-//            if (resultSet!=null) System.out.println(resultSet.getString("Password")); else System.out.println("resultset is null");
-            if (resultSet.getString("password").equals(PassField.getText())) {
-                 unloginedUser = new User(NameField.getText(),PassField.getText());
-                System.out.println("New object of user created successful");
+//        String sql = "SELECT \"password\" FROM public.\"User\" WHERE \"username\"='"+NameField.getText()+"';";
+//        ResultSet resultSet= BDConnection.createSelectQuery(sql);
+//        try {
+//            resultSet.next();
+//            if (resultSet.getString("password").equals(PassField.getText())) {
+//                System.out.println("New object of user created successful");
                 ((Node)actionEvent.getSource()).getScene().getWindow().hide();
+                MainWindow mainWindow = new MainWindow();
+                try {
+                    mainWindow.start(new Stage());
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
             }
-        } catch (SQLException e) {
-            System.out.println("Не получилось, не фартануло");
-        }
-    }
+//            else messageToUser.setVisible(true);
+//        } catch (SQLException e) {
+//            messageToUser.setVisible(true);
+//        }
+//    }
 
 
     public void setDisableButtonSign(String current){
+        messageToUser.setVisible(false);
         if (current.equals("")) {
             Sign.setDisable(true);
         }else
@@ -60,6 +66,7 @@ public class LogInController {
     }
 
     public void setDisablePassField(String current) {
+        messageToUser.setVisible(false);
         if (current.equals("")) {
             PassField.setDisable(true); Sign.setDisable(true);
         }
@@ -69,4 +76,13 @@ public class LogInController {
                 Sign.setDisable(false);
         }
         }
+
+    public void isPressedRegistrationButton(ActionEvent event) {
+        RegistrationWindow registrationWindow = new RegistrationWindow();
+        try {
+            registrationWindow.start(new Stage());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
