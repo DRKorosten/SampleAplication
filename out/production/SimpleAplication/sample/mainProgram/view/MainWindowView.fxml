@@ -6,64 +6,58 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" fx:id="currentScene" stylesheets="/sample/mainProgram/view/mainStyle.css" maxWidth="-Infinity" prefHeight="675.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.mainProgram.MainController">
+<BorderPane fx:id="currentScene" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="675.0" prefWidth="1200.0" stylesheets="/sample/mainProgram/view/mainStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.mainProgram.MainController">
    <top>
       <HBox alignment="CENTER" minHeight="100.0" minWidth="1200.0" prefHeight="100.0" prefWidth="1200.0" BorderPane.alignment="TOP_LEFT">
          <children>
-            <ImageView fitHeight="100.0" fitWidth="250.0"><Image url="@beginners-bodybuilding-program-2.jpg"></Image></ImageView>
-            <Label fx:id="mainLabel" prefHeight="100.0" prefWidth="600.0" alignment="CENTER" text="MAKE YOUR BODY STRONGER">
+            <ImageView fitHeight="100.0" fitWidth="250.0">
+               <image>
+                  <Image url="@beginners-bodybuilding-program-2.jpg" />
+               </image></ImageView>
+            <Label id="mainLabel" alignment="CENTER" prefHeight="100.0" prefWidth="600.0" text="MAKE YOUR BODY STRONGER">
                <font>
                   <Font size="38.0" />
                </font>
             </Label>
-            <StackPane fx:id="exitPane" prefHeight="100.0" prefWidth="400.0">
+            <VBox fx:id="exitPane" alignment="TOP_CENTER" prefHeight="100.0" prefWidth="400.0" spacing="0">
                <children>
-                  <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+                  <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0">
                      <children>
-                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
-                           <children>
-                              <Label alignment="CENTER"  fx:id="lableUser" prefHeight="40.0" prefWidth="200.0" text="">
-                                 <HBox.margin>
-                                    <Insets right="10.0" />
-                                 </HBox.margin>
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
-                              <Button alignment="CENTER" fx:id="buttonLogOut" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="175.0" text="LogOut">
-                                 <HBox.margin>
-                                    <Insets right="10.0" />
-                                 </HBox.margin>
-                              </Button>
-                           </children>
-                           <VBox.margin>
-                              <Insets />
-                           </VBox.margin>
-                        </HBox>
-                        <Button alignment="CENTER" fx:id="buttonEdit" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="200.0" text="Edit Profile">
+                        <Label fx:id="lableUser" alignment="CENTER" prefHeight="40.0" prefWidth="200.0" text="">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
                            <font>
-                              <Font size="17.0" />
+                              <Font size="18.0" />
                            </font>
+                        </Label>
+                        <Button fx:id="buttonLogOut" onAction="#logOut" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="40.0" prefWidth="175.0" text="LogOut">
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
                         </Button>
                      </children>
-                  </VBox>
+                  </HBox>
+                  <AnchorPane>
+                     <children>
+                        <Button fx:id="buttonEdit" alignment="CENTER" contentDisplay="CENTER" layoutX="88.0" mnemonicParsing="false"  prefHeight="30.0" prefWidth="200.0" text="Edit Profile">
+                         </Button>
+                     </children>
+                  </AnchorPane>
                </children>
-               <HBox.margin>
-                  <Insets />
-               </HBox.margin>
-            </StackPane>
+            </VBox>
          </children>
       </HBox>
    </top>
    <bottom>
       <HBox alignment="CENTER" prefHeight="80.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="buttonLeft" onAction="#previusPage" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="Previous">
+            <Button fx:id="buttonLeft" mnemonicParsing="false" onAction="#previusPage" prefHeight="50.0" prefWidth="200.0" text="Previous">
                <HBox.margin>
                   <Insets right="30.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="buttonRight" onAction="#nextPage" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="Next">
+            <Button fx:id="buttonRight" mnemonicParsing="false" onAction="#nextPage" prefHeight="50.0" prefWidth="200.0" text="Next">
             </Button>
          </children>
       </HBox>

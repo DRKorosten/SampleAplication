@@ -27,6 +27,7 @@ public class MainWindow extends Application {
             pages.add(loader1.load());
         }
         mainController.addGridsArray(pages.toArray(new GridPane[pages.size()]));
+        mainController.setLableUser("admin");
         primaryStage.setTitle("Main");
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);

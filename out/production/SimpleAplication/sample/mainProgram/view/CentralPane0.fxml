@@ -18,7 +18,7 @@
       <HBox alignment="CENTER" prefHeight="180.0" prefWidth="600.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
          <children>
             <ImageView fitHeight="150.0" fitWidth="230.0" pickOnBounds="true" ><Image url="@weight.jpg"></Image></ImageView>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Тренеровка на массу" textAlignment="CENTER" wrappingWidth="369.0">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Тренировка на массу" textAlignment="CENTER" wrappingWidth="369.0">
                <font>
                   <Font size="49.0" />
                </font>
@@ -27,7 +27,7 @@
       <HBox alignment="CENTER" prefHeight="180.0" prefWidth="600.0" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
          <children>
              <ImageView fitHeight="150.0" fitWidth="230.0" pickOnBounds="true" ><Image url="@strength.jpg"></Image></ImageView>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Тренеровка на силу" textAlignment="CENTER" wrappingWidth="369.0">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Тренировка на силу" textAlignment="CENTER" wrappingWidth="369.0">
                <font>
                   <Font size="49.0" />
                </font>
@@ -36,7 +36,7 @@
       <HBox alignment="CENTER" prefHeight="180.0" prefWidth="600.0" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
          <children>
              <ImageView fitHeight="150.0" fitWidth="230.0" pickOnBounds="true" ><Image url="@relief.jpg"></Image></ImageView>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Тренеровка на рельеф" textAlignment="CENTER" wrappingWidth="369.0">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Тренировка на рельеф" textAlignment="CENTER" wrappingWidth="369.0">
                <font>
                   <Font size="49.0" />
                </font>
@@ -44,7 +44,7 @@
          </children></HBox>
       <HBox alignment="CENTER" prefHeight="180.0" prefWidth="600.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Тренеровка для начинающих" textAlignment="CENTER" wrappingWidth="369.0">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Тренировка для начинающих" textAlignment="CENTER" wrappingWidth="369.0">
                <font>
                   <Font size="49.0" />
                </font>
@@ -53,7 +53,7 @@
          </children></HBox>
       <HBox alignment="CENTER" prefHeight="180.0" prefWidth="600.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Тренеровка дома" textAlignment="CENTER" wrappingWidth="369.0">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Тренировка дома" textAlignment="CENTER" wrappingWidth="369.0">
                <font>
                   <Font size="49.0" />
                </font>
