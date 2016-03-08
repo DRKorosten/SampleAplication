@@ -36,25 +36,27 @@ public class LogInController {
     }
     @FXML
     private void logInPressed(ActionEvent actionEvent) {
-//        String sql = "SELECT \"password\" FROM public.\"User\" WHERE \"username\"='"+NameField.getText()+"';";
-//        ResultSet resultSet= BDConnection.createSelectQuery(sql);
-//        try {
-//            resultSet.next();
-//            if (resultSet.getString("password").equals(PassField.getText())) {
-//                System.out.println("New object of user created successful");
+        String sql = "SELECT * FROM public.\"User\" WHERE \"username\"='"+NameField.getText()+"';";
+        ResultSet resultSet= BDConnection.createSelectQuery(sql);
+        try {
+            resultSet.next();
+            unloginedUser = new User(resultSet.getString("username"),resultSet.getString("password"),resultSet.getString("name"),resultSet.getString("surname"),resultSet.getString("email"));
+            if (unloginedUser.getPassword().equals(PassField.getText())) {
                 ((Node)actionEvent.getSource()).getScene().getWindow().hide();
-                MainWindow mainWindow = new MainWindow();
+                MainWindow mainWindow = new MainWindow(unloginedUser);
                 try {
                     mainWindow.start(new Stage());
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
             }
-//            else messageToUser.setVisible(true);
-//        } catch (SQLException e) {
-//            messageToUser.setVisible(true);
-//        }
-//    }
+            else messageToUser.setVisible(true);
+        } catch (SQLException e) {
+            messageToUser.setVisible(true);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
 
     public void setDisableButtonSign(String current){
@@ -85,4 +87,5 @@ public class LogInController {
             e.printStackTrace();
         }
     }
+
 }

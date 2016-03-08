@@ -1,5 +1,11 @@
 package sample.logIn.model;
 
+import javafx.stage.Stage;
+import sample.dialogForms.UnsuccessfulWindow;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 /**
  * Created by Dmytro on 2/28/2016.
  */

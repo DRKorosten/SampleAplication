@@ -7,6 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
+import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import sample.logIn.LogInWindow;
 
@@ -23,6 +24,7 @@ public class MainController {
 
     public void setLableUser(String userName){
         lableUser.setText(userName);
+        lableUser.setFont(new Font(lableUser.getFont().getName(),30));
     }
 
     public void addGridsArray(GridPane[] pages){

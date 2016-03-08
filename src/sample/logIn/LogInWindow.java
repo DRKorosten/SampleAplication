@@ -10,12 +10,10 @@ import javafx.stage.Stage;
 import sample.logIn.controller.LogInController;
 
 public class LogInWindow extends Application {
-    private Stage logInStage;
-    private LogInController logInController;
+     private LogInController logInController;
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        logInStage = primaryStage;
         FXMLLoader loader = new FXMLLoader(getClass().getResource("view/logInView.fxml"));
         Parent root =  loader.load();
         logInController = loader.getController();

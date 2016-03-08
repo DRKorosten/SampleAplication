@@ -38,6 +38,4 @@ Button:pressed{
     -fx-text-fill: yellow;
     -fx-font-weight: bolder;
     -fx-font-style: italic;
-    -fx-font-size: 40px;
-
 }
