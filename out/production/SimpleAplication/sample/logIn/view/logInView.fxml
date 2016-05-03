@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane fx:id="MainPane" alignment="CENTER" hgap="10.0" prefHeight="400.0" prefWidth="600.0" stylesheets="/sample/logIn/view/logInStyle.css" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.logIn.controller.LogInController">
+<GridPane fx:id="MainPane" alignment="CENTER" hgap="10.0" onKeyPressed="#tryLogIn" prefHeight="400.0" prefWidth="600.0" stylesheets="/sample/logIn/view/logInStyle.css" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.logIn.controller.LogInController">
    <children>
             <TextField fx:id="NameField" prefHeight="35.0" prefWidth="250.0" promptText="Name" GridPane.rowIndex="1">
                <font>
@@ -26,10 +27,21 @@
                   <Font name="Cambria Math" size="21.0" />
                </font>
             </Button>
-      <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="2.0" visible="false" prefHeight="35.0" prefWidth="250.0" fx:id="messageToUser" text="Incorrect login or password">
+      <Label fx:id="messageToUser" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="2.0" prefHeight="35.0" prefWidth="250.0" text="Incorrect login or password" visible="false">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
    </children>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
 </GridPane>

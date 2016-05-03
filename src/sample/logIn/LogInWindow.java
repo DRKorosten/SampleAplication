@@ -17,16 +17,11 @@ public class LogInWindow extends Application {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("view/logInView.fxml"));
         Parent root =  loader.load();
         logInController = loader.getController();
-        logInController.getNameField().textProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                logInController.setDisablePassField(newValue);
-            } });
-        logInController.getPassField().textProperty().addListener(new ChangeListener<String>() {
-            @Override
-            public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-                logInController.setDisableButtonSign(newValue);
-            }
+        logInController.getNameField().textProperty().addListener((observable, oldValue, newValue) -> {
+            logInController.setDisablePassField(newValue);
+        });
+        logInController.getPassField().textProperty().addListener((observable, oldValue, newValue) -> {
+            logInController.setDisableButtonSign(newValue);
         });
         primaryStage.setTitle("Log In");
         Scene scene = new Scene(root);
@@ -37,6 +32,5 @@ public class LogInWindow extends Application {
 
     public static void main(String[] args) {
       launch(args);
-
     }
 }

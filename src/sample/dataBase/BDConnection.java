@@ -1,12 +1,8 @@
 package sample.dataBase;
 
 import javafx.stage.Stage;
-import sample.dialogForms.UnsuccessfulWindow;
-
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import sample.dialogForms.unseccessfulREG.UnsuccessfulWindow;
+import java.sql.*;
 
 public class BDConnection {
     private static final String database = "test_user";
@@ -14,7 +10,7 @@ public class BDConnection {
     private static final String password = "floppy419";
     private static Connection connection;
 
-    public static void createOtherQuerys(String query) {
+    public static void createOtherQueries(String query) {
         try {
             Class.forName("org.postgresql.Driver");
             connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/" + database, username, password);
@@ -22,24 +18,32 @@ public class BDConnection {
             statement.execute(query);
             connection.close();
         } catch (Exception ee) {
-            UnsuccessfulWindow unsuccessfulWindow = new UnsuccessfulWindow();
-            try {
-                unsuccessfulWindow.start(new Stage());
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+                ee.printStackTrace();
         }
     }
-    public static ResultSet createSelectQuery(String query) {
-        ResultSet result = null;
+    public static ResultSet createSelectQuery(String query) throws SQLException {
+        ResultSet result;
         try {
             Class.forName("org.postgresql.Driver");
-            connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/" + database, username, password);//
-            Statement statement = connection.createStatement();
-             result = statement.executeQuery(query);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        try {
+            connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/" + database, username, password);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        Statement statement = null;
+        try {
+            statement = connection.createStatement();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+            result = statement.executeQuery(query);
+        try {
             connection.close();
-        } catch (Exception ee) {
-            ee.printStackTrace();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
         return result;
     }

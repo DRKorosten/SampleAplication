@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" stylesheets="/sample/dataEdit/view/editStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.dataEdit.controller.EditDataController">
+   <center>
+      <VBox alignment="CENTER" fillWidth="false" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="First name" VBox.vgrow="ALWAYS" />
+            <TextField fx:id="firstName" alignment="CENTER" prefHeight="35.0" prefWidth="300.0" VBox.vgrow="ALWAYS">
+            </TextField>
+            <Label text="Last name" VBox.vgrow="ALWAYS" />
+            <TextField fx:id="lastName" alignment="CENTER" prefHeight="35.0" prefWidth="300.0" VBox.vgrow="ALWAYS">
+            </TextField>
+            <Label text="E-mail" VBox.vgrow="ALWAYS" />
+            <TextField fx:id="eMail" alignment="CENTER" prefHeight="35.0" prefWidth="300.0" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </TextField>
+
+                  <Button fx:id="changePassButton" mnemonicParsing="false" onAction="#changePass" text="Change password" />
+         </children></VBox>
+   </center>
+   <top>
+      <Label fx:id="Edit" text="Editing Profile" BorderPane.alignment="CENTER" />
+   </top>
+   <bottom>
+      <HBox spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="saveButton" alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#savePressed" prefHeight="25.0" prefWidth="212.0" text="Save" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="30.0" />
+               </BorderPane.margin>
+            </Button>
+            <Button mnemonicParsing="false"  fx:id="cancelButton" onAction="#exit" prefHeight="25.0" prefWidth="213.0" text="Cancel" />
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

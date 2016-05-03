@@ -3,8 +3,10 @@
     -fx-background-size: cover, auto;
 }
 #currentScene{
-    -fx-background-image: url("MainBackground.jpg");
-    -fx-background-size: stretch, auto;
+    -fx-background-image: url("mainBack.png");
+    -fx-background-size: 1210 585;
+    -fx-background-position: bottom;
+    -fx-background-repeat: no-repeat;
 }
 #mainLabel{
     -fx-background-image: url("TextBackground.jpg");

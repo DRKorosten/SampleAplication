@@ -64,7 +64,7 @@
          </children></VBox>
    </center>
    <top>
-      <Label text="Registration" BorderPane.alignment="CENTER" />
+      <Label fx:id="Reg" text="Registration" BorderPane.alignment="CENTER" />
    </top>
    <bottom>
       <Button fx:id="signUpButton" alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#SignUpPressed" text="Sign Up" BorderPane.alignment="CENTER">

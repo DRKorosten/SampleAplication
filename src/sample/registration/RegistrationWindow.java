@@ -8,21 +8,27 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
+import javafx.stage.Window;
+import sample.logIn.LogInWindow;
 import sample.registration.controller.RegistrationController;
 
 /**
  * Created by Dmytro on 3/2/2016.
  */
 public class RegistrationWindow extends Application{
-    private Stage registrationStage;
+    private Window parent;
     private RegistrationController registrationController;
+
+    public void setParent(Window parent){
+        this.parent = parent;
+    }
     @Override
     public void start(Stage primaryStage) throws Exception {
         Font.loadFont(getClass().getResource("/sample/registration/view/registration.ttf").toExternalForm(),15);
-        registrationStage = primaryStage;
         FXMLLoader loader = new FXMLLoader(getClass().getResource("view/registration.fxml"));
         Parent root =  loader.load();
         registrationController = loader.getController();
+        registrationController.setParent(parent);
         registrationController.getUsernameField().textProperty().addListener(new ChangeListener<String>() {
             @Override
             public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox alignment="CENTER" fillWidth="false" fx:controller="sample.dialogForms.successfulREG.SRGController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="CENTER" prefHeight="89.0" prefWidth="385.0" text="Благодарим вас за регистрацию!">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button alignment="CENTER" contentDisplay="CENTER" onAction="#closeWindow" defaultButton="true" mnemonicParsing="false" prefHeight="34.0" prefWidth="88.0" text="OK">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</VBox>

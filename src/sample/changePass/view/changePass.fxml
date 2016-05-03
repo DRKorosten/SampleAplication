@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="400.0" spacing="10.0" stylesheets="/sample/changePass/view/changePass.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.changePass.controller.ChangePassController">
+   <children>
+      <Label fx:id="Save" alignment="CENTER" text="Changing password">
+         <opaqueInsets>
+            <Insets bottom="10.0" top="10.0" />
+         </opaqueInsets>
+      </Label>
+      <PasswordField fx:id="oldPass" alignment="CENTER" prefWidth="200.0" promptText="Enter your current password" />
+      <PasswordField fx:id="newPass" alignment="CENTER" disable="true" prefWidth="200.0" promptText="New password" />
+      <PasswordField fx:id="confirmPass" alignment="CENTER" disable="true" prefWidth="200.0" promptText="Confirm new password" />
+      <Button fx:id="saveButton" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" disable="true" mnemonicParsing="false" onAction="#savePass" prefHeight="34.0" prefWidth="150.0" text="Save">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <opaqueInsets>
+            <Insets bottom="10.0" top="10.0" />
+         </opaqueInsets>
+      </Button>
+   </children>
+</VBox>
