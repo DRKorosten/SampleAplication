@@ -1,4 +1,7 @@
-#Save{
+.label{
+    -fx-font-family: 'Kaushan Script';
+    -fx-font-size: 14px;
+} #Save{
     -fx-font-family: 'Kaushan Script';
     -fx-font-size: 25px;
 }

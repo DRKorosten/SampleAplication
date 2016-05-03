@@ -1,13 +1,16 @@
 Text{
     -fx-font-family: monospace;
     -fx-font-style: oblique;
-    -fx-fill: chartreuse;
+    -fx-fill: cyan;
     -fx-font-size: 48px;
     -fx-font-weight: 900;
 
 }
+ImageView{
+    -fx-border-radius: 40;
+}
 HBox{
     -fx-border-width: 2px;
     -fx-border-color: teal;
-
+    -fx-border-radius: 20;
 }
